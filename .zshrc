@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ##################################################################################################
-### Denis zshrc configuration
+### zsh configuration
 ##################################################################################################
 
 ### Aliases
@@ -117,6 +117,11 @@ alias zshreload='source ~/.zshrc'
 alias vimconf='vim ~/.config/nvim/init.vim'
 alias alacrittyconf='vim ~/.config/alacritty/alacritty.yml'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotfilescommit() {
+    dotfiles add .zshrc .config/nvim/init.vim
+    dotfiles commit -m 'automated commit'
+    dotfiles push -u origin main
+}
 
 ### Apps
 ##################################################################################################

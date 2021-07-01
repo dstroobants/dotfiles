@@ -224,5 +224,6 @@ set noshowmode
 
 """ Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Retro groove color scheme for Vim
 colorscheme gruvbox
 
