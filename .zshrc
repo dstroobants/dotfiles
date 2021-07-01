@@ -110,12 +110,9 @@ source $ZSH/oh-my-zsh.sh
 ### Aliases
 ##################################################################################################
 alias vim='nvim'
-alias bashconf='vim ~/.bashrc'
-alias bashreload='source ~/.bashrc'
 alias zshconf='vim ~/.zshrc'
 alias zshreload='source ~/.zshrc'
 alias vimconf='vim ~/.config/nvim/init.vim'
-alias alacrittyconf='vim ~/.config/alacritty/alacritty.yml'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilescommit() {
     dotfiles add .zshrc .config/nvim/init.vim
