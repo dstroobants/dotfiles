@@ -124,6 +124,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'lambdalisue/fern.vim'
 " Fix for Fern's cursor performance issue
 Plug 'antoinemadec/FixCursorHold.nvim'
+" Add Git status badge integration on file:// scheme on fern.vim
+Plug 'lambdalisue/fern-git-status.vim'
 " Retro groove color scheme for Vim
 Plug 'gruvbox-community/gruvbox'
 " The fancy start screen for Vim
