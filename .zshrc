@@ -71,7 +71,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -119,10 +118,11 @@ alias tmuxnew='tmux new -s'
 alias tmuxnewdetached='tmux new -d -s'
 alias tmuxattach='tmux a -t'
 alias kube='kubectl'
+alias awslogin="docker run --rm -it -v ${HOME}/.aws:/root/.aws docker-registry.corp.qc:5000/qc/aws-tools ./qc_aws_login.py -u ${USER}"
 
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dotfilesupdate() {
+dotfilesupload() {
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
     dotfiles commit -m 'automated commit'
     dotfiles push -u origin main
