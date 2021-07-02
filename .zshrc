@@ -122,10 +122,14 @@ alias kube='kubectl'
 
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dotfilescommit() {
+dotfilesupdate() {
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
     dotfiles commit -m 'automated commit'
     dotfiles push -u origin main
+}
+dotfilesdownload() {
+    dotfiles fetch
+    dotfiles pull
 }
 
 ### Functions
