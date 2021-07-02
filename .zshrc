@@ -123,7 +123,7 @@ alias awslogin="docker run --rm -it -v ${HOME}/.aws:/root/.aws docker-registry.c
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
-    dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
+    dotfiles add ~/.config/nvim/init.vim ~/.tmux.conf
     dotfiles commit -m 'automated commit'
     dotfiles push -u origin main
 }
