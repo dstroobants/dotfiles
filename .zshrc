@@ -115,7 +115,7 @@ alias zshreload='source ~/.zshrc'
 alias vimconf='vim ~/.config/nvim/init.vim'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilescommit() {
-    dotfiles add .zshrc .config/nvim/init.vim
+    dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
     dotfiles commit -m 'automated commit'
     dotfiles push -u origin main
 }
