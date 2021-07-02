@@ -113,11 +113,34 @@ alias vim='nvim'
 alias zshconf='vim ~/.zshrc'
 alias zshreload='source ~/.zshrc'
 alias vimconf='vim ~/.config/nvim/init.vim'
+alias tmuxconf='vim ~/.tmux.conf'
+alias tmuxreload='tmux source ~/.tmux.conf'
+alias tmuxnew='tmux new -s'
+alias tmuxnewdetached='tmux new -d -s'
+alias tmuxattach='tmux a -t'
+alias kube='kubectl'
+
+# dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilescommit() {
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
     dotfiles commit -m 'automated commit'
     dotfiles push -u origin main
+}
+
+### Functions
+##################################################################################################
+# http://cheat.sh/
+function cheat(){
+    curl cheat.sh/$1
+}
+
+function ec2IP(){
+    ec2_ip=$(
+        aws ec2 describe-instances \
+        --instance-id $1
+    )
+    echo $ec2_ip | jq '.[][0]["Instances"][0]["PrivateIpAddress"]' | tr -d '"'
 }
 
 ### Apps
