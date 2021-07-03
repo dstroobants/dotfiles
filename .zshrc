@@ -37,7 +37,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
     USER = echo $USER
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
-    dotfiles commit -m "'Update from '${USER}" 
+    dotfiles commit -m "Update from ${USER}" 
     dotfiles push -u origin main
 }
 dotfilesdownload() {
