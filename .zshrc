@@ -38,7 +38,7 @@ alias kube='kubectl'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
-    dotfiles commit -m 'automated commit'
+    dotfiles commit -m 'Update from $USER'
     dotfiles push -u origin main
 }
 dotfilesdownload() {
