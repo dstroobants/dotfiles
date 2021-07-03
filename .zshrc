@@ -35,7 +35,7 @@ alias kube='kubectl'
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
-    user = echo $USER
+    user = echo "$USER"
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
     dotfiles commit -m 'Update from ${user}' 
     dotfiles push -u origin main
