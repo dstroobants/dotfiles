@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/denis/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -22,6 +22,8 @@ plugins=(git)
 ### Aliases
 ##################################################################################################
 alias vim='nvim'
+alias bashconf='vim ~/.bash_profile'
+alias bashreload='source ~/.bash_profile'
 alias zshconf='vim ~/.zshrc'
 alias zshreload='source ~/.zshrc'
 alias vimconf='vim ~/.config/nvim/init.vim'
@@ -71,5 +73,13 @@ plugins=(
   zsh-autosuggestions
 )
 
+### Local Configuration
+##################################################################################################
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile;
+fi
+
+### Oh My Zsh
+##################################################################################################
 source $ZSH/oh-my-zsh.sh
 
