@@ -38,7 +38,7 @@ alias kube='kubectl'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
     USER = echo $USER
-    dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf
+    dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf ~/.alacritty.yml
     dotfiles commit -m "Update from ${USER}" 
     dotfiles push -u origin main
 }
@@ -54,6 +54,8 @@ function cheat(){
     curl cheat.sh/$1
 }
 
+# Call the function: ec2IP<space><instance_name> eg: ec2IP i-0edb9adfe373a6ebf
+# Requires your to be logged in via the aws cli
 function ec2IP(){
     ec2_ip=$(
         aws ec2 describe-instances \
