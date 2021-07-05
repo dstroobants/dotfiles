@@ -2,7 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+if [ ${USER} = 'denis' ]; then
+    export ZSH="/home/denis/.oh-my-zsh"
+else 
+    export ZSH="~/.oh-my-zsh"
+fi
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -38,7 +42,7 @@ alias kube='kubectl'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
     USER = echo $USER
-    dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf ~/.alacritty.yml
+dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf ~/.alacritty.yml
     dotfiles commit -m "Update from ${USER}" 
     dotfiles push -u origin main
 }
