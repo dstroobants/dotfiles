@@ -59,7 +59,7 @@ function cheat(){
 }
 
 # Call the function: ec2IP<space><instance_name> eg: ec2IP i-0edb9adfe373a6ebf
-# Requires your to be logged in via the aws cli
+# Requires to be logged in via the aws cli
 function ec2IP(){
     ec2_ip=$(
         aws ec2 describe-instances \
@@ -88,3 +88,4 @@ fi
 ### Oh My Zsh
 ##################################################################################################
 source $ZSH/oh-my-zsh.sh
+
