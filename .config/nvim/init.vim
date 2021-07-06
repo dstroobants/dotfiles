@@ -5,6 +5,11 @@
 """ Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""" Clipboard
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Uses the system clipboard as default
+set clipboard+=unnamedplus
+
 """ Indention Options
 """""""""""""""""""""""""""""
 " New lines inherit the indentation of previous lines.
@@ -140,6 +145,8 @@ set rtp+=~/.vim/plugged/tabnine-vim
 Plug 'mbbill/undotree'
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
+" A solid language pack for vim
+Plug 'sheerun/vim-polyglot'
 
 " Initialize plugin system
 call plug#end()
