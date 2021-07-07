@@ -36,6 +36,7 @@ alias tmuxreload='tmux source ~/.tmux.conf'
 alias tmuxnew='tmux new -s'
 alias tmuxnewdetached='tmux new -d -s'
 alias tmuxattach='tmux a -t'
+alias alacrittyconf='vim ~/.alacritty.yml'
 alias kube='kubectl'
 
 # dotfiles repo configuration
