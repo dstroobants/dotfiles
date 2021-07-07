@@ -27,7 +27,7 @@ set smarttab
 " Indent using four spaces.
 set tabstop=4
 
-""" Search Options 
+""" Search Options
 """""""""""""""""""""""""""""
 " Enable search highlighting.
 set hlsearch
@@ -38,14 +38,14 @@ set incsearch
 " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 set smartcase
 
-""" Performance Options 
+""" Performance Options
 """""""""""""""""""""""""""""
 " Limit the files searched for auto-completes.
 set complete-=i
 " Don’t update screen during macro and script execution.
 set lazyredraw
 
-""" Text Rendering Options 
+""" Text Rendering Options
 """""""""""""""""""""""""""""
 " Always try to show a paragraph’s last line.
 set display+=lastline
@@ -62,7 +62,7 @@ syntax enable
 " Enable line wrapping.
 set wrap
 
-""" User Interface Options 
+""" User Interface Options
 """""""""""""""""""""""""""""
 " Always display the status bar.
 set laststatus=2
@@ -132,7 +132,9 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " Add Git status badge integration on file:// scheme on fern.vim
 Plug 'lambdalisue/fern-git-status.vim'
 " Retro groove color scheme for Vim
-Plug 'gruvbox-community/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
+" Nord color scheme for Vim
+Plug 'arcticicestudio/nord-vim'
 " The fancy start screen for Vim
 Plug 'mhinz/vim-startify'
 " Fuzzy file, buffer, mru, tag, etc finder.
@@ -236,5 +238,7 @@ set noshowmode
 """ Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Retro groove color scheme for Vim
-colorscheme gruvbox
+" colorscheme Gruvbox
+" Nord color scheme
+colorscheme Nord
 

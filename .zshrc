@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 if [ ${USER} = 'denis' ]; then
     export ZSH="/home/denis/.oh-my-zsh"
-else 
+else
     export ZSH="~/.oh-my-zsh"
 fi
 
@@ -43,7 +43,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
     USER = echo $USER
 dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf ~/.alacritty.yml
-    dotfiles commit -m "Update from ${USER}" 
+    dotfiles commit -m "Update from ${USER}"
     dotfiles push -u origin main
 }
 dotfilesdownload() {
