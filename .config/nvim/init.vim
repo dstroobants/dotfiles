@@ -147,6 +147,8 @@ Plug 'mbbill/undotree'
 Plug 'itchyny/lightline.vim'
 " A solid language pack for vim
 Plug 'sheerun/vim-polyglot'
+" Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
+Plug 'bronson/vim-trailing-whitespace'
 
 " Initialize plugin system
 call plug#end()
