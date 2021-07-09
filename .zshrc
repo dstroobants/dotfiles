@@ -42,7 +42,6 @@ alias kube='kubectl'
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfilesupload() {
-    USER = echo $USER
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf ~/.alacritty.yml
     case $USER in
         "dstroobants")
