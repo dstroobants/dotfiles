@@ -240,5 +240,5 @@ set noshowmode
 " Retro groove color scheme for Vim
 " colorscheme Gruvbox
 " Nord color scheme
-colorscheme Nord
+colorscheme nord
 
