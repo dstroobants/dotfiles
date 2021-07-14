@@ -132,7 +132,7 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " Add Git status badge integration on file:// scheme on fern.vim
 Plug 'lambdalisue/fern-git-status.vim'
 " Retro groove color scheme for Vim
-"Plug 'gruvbox-community/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 " Nord color scheme for Vim
 Plug 'arcticicestudio/nord-vim'
 " The fancy start screen for Vim
@@ -238,7 +238,7 @@ set noshowmode
 """ Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Retro groove color scheme for Vim
-" colorscheme Gruvbox
+colorscheme Gruvbox
 " Nord color scheme
-colorscheme nord
+"colorscheme nord
 
