@@ -96,4 +96,4 @@ source $ZSH/oh-my-zsh.sh
 ### Globalias filtered values
 ##################################################################################################
 # These values won't be expanded
-GLOBALIAS_FILTER_VALUES=(grep)
+GLOBALIAS_FILTER_VALUES=(grep, dotfiles)

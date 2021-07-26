@@ -136,7 +136,7 @@ Plug 'gruvbox-community/gruvbox'
 " Nord color scheme for Vim
 Plug 'arcticicestudio/nord-vim'
 " The fancy start screen for Vim
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'kien/ctrlp.vim'
 " Terminal manager for (neo)vim
