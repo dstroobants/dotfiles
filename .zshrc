@@ -79,6 +79,7 @@ alias sublime='~/./Apps/sublime_text/sublime_text'
 plugins=(
   git
   zsh-autosuggestions
+  globalias
 )
 
 ### Local Configuration
