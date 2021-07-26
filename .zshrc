@@ -33,6 +33,7 @@ alias tmuxnewdetached='tmux new -d -s'
 alias tmuxattach='tmux a -t'
 alias alacrittyconf='vim ~/.alacritty.yml'
 alias kube='kubectl'
+alias f='vim $(fzf)'
 
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
