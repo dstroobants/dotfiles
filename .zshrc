@@ -5,7 +5,7 @@
 if [ ${USER} = 'denis' ]; then
     export ZSH="/home/denis/.oh-my-zsh"
 else
-    export ZSH="~/.oh-my-zsh"
+    export ZSH="/Users/dstroobants/.oh-my-zsh"
 fi
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
