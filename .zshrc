@@ -34,6 +34,7 @@ alias tmuxattach='tmux a -t'
 alias alacrittyconf='vim ~/.alacritty.yml'
 alias kube='kubectl'
 alias f='vim $(fzf)'
+alias drun='docker run -it --rm'
 
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -96,4 +97,4 @@ source $ZSH/oh-my-zsh.sh
 ### Globalias filtered values
 ##################################################################################################
 # These values won't be expanded
-GLOBALIAS_FILTER_VALUES=(grep, dotfiles)
+GLOBALIAS_FILTER_VALUES=(grep, dotfiles, awslogin)
