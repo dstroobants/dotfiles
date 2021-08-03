@@ -65,6 +65,7 @@ gitreload() {
     fi
     git fetch
     git pull
+    git stash pop
 }
 
 ### Functions
