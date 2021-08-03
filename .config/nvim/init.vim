@@ -96,6 +96,9 @@ set nomodeline
 
 """ Remaps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap leader to space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 " Fern : map leader + f to fern toggle
 nnoremap <silent><Leader>f :Fern . -drawer -reveal=% -toggle -width=35<CR>
 " FzF

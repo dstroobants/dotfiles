@@ -55,6 +55,18 @@ dotfilesdownload() {
     dotfiles pull
 }
 
+# Git
+gitreload() {
+    git stash
+    if [ ${USER} = denis ]; then
+        git checkout main
+    else
+        git checkout master
+    fi
+    git fetch
+    git pull
+}
+
 ### Functions
 ##################################################################################################
 # http://cheat.sh/
