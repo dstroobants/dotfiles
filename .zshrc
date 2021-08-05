@@ -20,11 +20,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ### Aliases
 ##################################################################################################
-if [ ${USER} = 'denis' ]; then
-    alias g="cd ~/Work/git"
-else
-    alias g="cd ~/git"
-fi
 alias vim='nvim'
 alias f='vim $(fzf)'
 alias bashconf='vim ~/.bash_profile'
