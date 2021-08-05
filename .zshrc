@@ -20,7 +20,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ### Aliases
 ##################################################################################################
+if [ ${USER} = 'denis' ]; then
+    alias g="cd ~/Work/git"
+else
+    alias g="cd ~/git"
+fi
 alias vim='nvim'
+alias f='vim $(fzf)'
 alias bashconf='vim ~/.bash_profile'
 alias bashreload='source ~/.bash_profile'
 alias zshconf='vim ~/.zshrc'
@@ -33,7 +39,6 @@ alias tmuxnewdetached='tmux new -d -s'
 alias tmuxattach='tmux a -t'
 alias alacrittyconf='vim ~/.alacritty.yml'
 alias kube='kubectl'
-alias f='vim $(fzf)'
 alias drun='docker run -it --rm'
 
 # dotfiles repo configuration
