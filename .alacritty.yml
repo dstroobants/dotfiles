@@ -39,6 +39,8 @@ font:
     family: MesloLGS NF
     style: Bold Italic
 
+  size: 14.0
+
 ### Theme
 ###################################################################################################
 # Colors (Gruvbox dark)
