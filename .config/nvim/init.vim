@@ -99,8 +99,6 @@ set nomodeline
 " Remap leader to space
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-" Fern : map leader + f to fern toggle
-nnoremap <silent><Leader>f :Fern . -drawer -reveal=% -toggle -width=35<CR>
 " FzF
 nnoremap <Leader>p :FZF<CR>
 " RipGrep
@@ -128,12 +126,6 @@ Plug 'airblade/vim-gitgutter'
 " A command-line fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" General purpose asynchronous tree viewer written in Pure Vim script
-Plug 'lambdalisue/fern.vim'
-" Fix for Fern's cursor performance issue
-Plug 'antoinemadec/FixCursorHold.nvim'
-" Add Git status badge integration on file:// scheme on fern.vim
-Plug 'lambdalisue/fern-git-status.vim'
 " Retro groove color scheme for Vim
 Plug 'gruvbox-community/gruvbox'
 " Nord color scheme for Vim
@@ -154,6 +146,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
 " Highlights trailing whitespace in red and provides :StripWhitespace to fix it.
 Plug 'ntpeters/vim-better-whitespace'
+" The NERDTree is a file system explorer for the Vim editor
+Plug 'preservim/nerdtree'
 
 " Initialize plugin system
 call plug#end()
@@ -161,66 +155,12 @@ call plug#end()
 """ Plugins' specific configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Fern's cursor
+""" Nerdtree
 """""""""""""""""""""""""""""
-" in millisecond, used for both CursorHold and CursorHoldI,
-" use updatetime instead if not defined
-let g:cursorhold_updatetime = 100
+nnoremap <Leader>f :NERDTreeToggle<CR>
 
-" Fern
-"""""""""""""""""""""""""""""
-" Disable netrw (Default vim file explorer as we are using fern)
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
-let g:loaded_netrwSettings = 1
-let g:loaded_netrwFileHandlers = 1
-
-augroup my-fern-hijack
-  autocmd!
-  autocmd BufEnter * ++nested call s:hijack_directory()
-augroup END
-
-function! s:hijack_directory() abort
-  let path = expand('%:p')
-  if !isdirectory(path)
-    return
-  endif
-  bwipeout %
-  execute printf('Fern %s', fnameescape(path))
-endfunction
-
-" Custom settings and mappings.
-let g:fern#disable_default_mappings = 1
-let g:fern#default_hidden = 1
-
-function! FernInit() abort
-  nmap <buffer><expr>
-        \ <Plug>(fern-my-open-expand-collapse)
-        \ fern#smart#leaf(
-        \   "\<Plug>(fern-action-open:select)",
-        \   "\<Plug>(fern-action-expand)",
-        \   "\<Plug>(fern-action-collapse)",
-        \ )
-  nmap <buffer> <CR> <Plug>(fern-my-open-expand-collapse)
-  nmap <buffer> <2-LeftMouse> <Plug>(fern-my-open-expand-collapse)
-  nmap <buffer> n <Plug>(fern-action-new-path)
-  nmap <buffer> d <Plug>(fern-action-remove)
-  nmap <buffer> m <Plug>(fern-action-move)
-  nmap <buffer> M <Plug>(fern-action-rename)
-  nmap <buffer> h <Plug>(fern-action-hidden-toggle)
-  nmap <buffer> r <Plug>(fern-action-reload)
-  nmap <buffer> k <Plug>(fern-action-mark)
-  nmap <buffer> K <Plug>(fern-action-mark-children:leaf)
-  nmap <buffer> b <Plug>(fern-action-open:split)
-  nmap <buffer> v <Plug>(fern-action-open:vsplit)
-  nmap <buffer><nowait> < <Plug>(fern-action-leave)
-  nmap <buffer><nowait> > <Plug>(fern-action-enter)
-endfunction
-
-augroup FernGroup
-  autocmd!
-  autocmd FileType fern call FernInit()
-augroup END
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 
 """ Lightline
 """""""""""""""""""""""""""""
