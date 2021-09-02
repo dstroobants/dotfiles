@@ -105,8 +105,6 @@ nnoremap <Leader>p :FZF<CR>
 nnoremap <Leader>g :Rg<CR>
 " FloatTerm
 nnoremap <Leader>t :FloatermNew --height=0.9 --width=0.9 --wintype=float<CR>
-" ctrlp
-nnoremap <Leader>c :CtrlPMixed<CR>
 " Undotree
 nnoremap <Leader>u :UndotreeToggle<CR>
 " Substitute
