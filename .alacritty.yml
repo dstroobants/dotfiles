@@ -9,8 +9,8 @@ window:
     x: 2
     y: 2
   dynamic_padding: true
-  startup_mode: Maximized
-  
+  startup_mode: fullscreen 
+
 ### Background opacity
 ###################################################################################################
 background_opacity: 0.9
@@ -40,6 +40,11 @@ font:
     style: Bold Italic
 
   size: 14.0
+
+### Key bindings
+###################################################################################################
+key_bindings:
+  - { key: F11, action: ToggleFullscreen      }
 
 ### Theme
 ###################################################################################################

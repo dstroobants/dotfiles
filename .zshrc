@@ -33,6 +33,7 @@ alias tmuxnew='tmux new -s'
 alias tmuxnewdetached='tmux new -d -s'
 alias tmuxattach='tmux a -t'
 alias alacrittyconf='vim ~/.alacritty.yml'
+alias alacrittyupdate='cd ~/Apps/alacritty/ && git pull'
 alias kube='kubectl'
 alias drun='docker run -it --rm'
 
