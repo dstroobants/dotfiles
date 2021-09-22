@@ -135,7 +135,7 @@ Plug 'kien/ctrlp.vim'
 " Terminal manager for (neo)vim
 Plug 'voldikss/vim-floaterm'
 " Tabnine AI autocomplete
-set rtp+=~/.vim/plugged/tabnine-vim
+" set rtp+=~/.vim/plugged/tabnine-vim
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
 " A light and configurable statusline/tabline plugin for Vim
@@ -146,6 +146,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ntpeters/vim-better-whitespace'
 " The NERDTree is a file system explorer for the Vim editor
 Plug 'preservim/nerdtree'
+" A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
+Plug 'elzr/vim-json'
 
 " Initialize plugin system
 call plug#end()
@@ -179,7 +181,7 @@ set noshowmode
 """ Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Retro groove color scheme for Vim
-colorscheme gruvbox
+" colorscheme gruvbox
 " Nord color scheme
-"colorscheme nord
+colorscheme nord
 
