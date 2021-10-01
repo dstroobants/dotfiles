@@ -39,6 +39,7 @@ alias drun='docker run -it --rm'
 
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 dotfilesupload() {
     dotfiles add ~/.zshrc ~/.config/nvim/init.vim ~/.tmux.conf ~/.alacritty.yml
     case $USER in
@@ -51,6 +52,7 @@ dotfilesupload() {
     esac
     dotfiles push -u origin main
 }
+
 dotfilesdownload() {
     dotfiles fetch
     dotfiles pull
