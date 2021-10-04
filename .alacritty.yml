@@ -8,7 +8,7 @@ shell:
   program: /bin/bash
   args:
     - -c
-    - tmux new -s Main || : tmux attach -t Main
+    - tmux new -s Main; tmux attach -t Main
 
 ### Window
 ###################################################################################################
