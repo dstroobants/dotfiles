@@ -71,6 +71,11 @@ gitreload() {
     git stash pop
 }
 
+function gitpushall() {
+    git add *
+    git commit -m "$1"
+    git push
+}
 ### Functions
 ##################################################################################################
 # http://cheat.sh/
