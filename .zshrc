@@ -1,11 +1,16 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # Path to your oh-my-zsh installation.
 if [ ${USER} = 'denis' ]; then
     export ZSH="/home/denis/.oh-my-zsh"
 else
-    export ZSH="/Users/dstroobants/.oh-my-zsh"
+    export ZSH="/Users/denis.stroobants/.oh-my-zsh"
+    export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -101,7 +106,7 @@ alias sublime='~/./Apps/sublime_text/sublime_text'
 ##################################################################################################
 plugins=(
   git
-  zsh-autosuggestions
+  #zsh-autosuggestions
 )
 
 ### Local Configuration
@@ -113,4 +118,9 @@ fi
 ### Oh My Zsh
 ##################################################################################################
 source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+### Kubectl auto completion
+##################################################################################################
+
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
