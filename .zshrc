@@ -122,5 +122,4 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ### Kubectl auto completion
 ##################################################################################################
-
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
