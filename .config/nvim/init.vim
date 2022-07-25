@@ -148,12 +148,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ntpeters/vim-better-whitespace'
 " The NERDTree is a file system explorer for the Vim editor
 Plug 'preservim/nerdtree'
+" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
+Plug 'ryanoasis/vim-devicons'
+" Needed for devicons color
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
 Plug 'elzr/vim-json'
 " A Vim plugin for visually displaying indent levels in code
 Plug 'nathanaelkane/vim-indent-guides'
-" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
-Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
@@ -167,8 +169,9 @@ nnoremap <Leader>f :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
-""" Fern
-"""""""""""""""""""""""""""""
+let g:NERDTreeDisableFileExtensionHighlight = 1
+let g:NERDTreeDisableExactMatchHighlight = 1
+let g:NERDTreeDisablePatternMatchHighlight = 1
 
 """ Lightline
 """""""""""""""""""""""""""""
@@ -194,3 +197,4 @@ set noshowmode
 " colorscheme nord
 " TokyoNight Color Scheme
 colorscheme tokyonight
+
