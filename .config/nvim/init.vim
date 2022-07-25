@@ -150,7 +150,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'preservim/nerdtree'
 " A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
 Plug 'elzr/vim-json'
-
+" A Vim plugin for visually displaying indent levels in code
+Plug 'nathanaelkane/vim-indent-guides'
+" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
+Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
@@ -163,6 +166,9 @@ nnoremap <Leader>f :NERDTreeToggle<CR>
 
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+
+""" Fern
+"""""""""""""""""""""""""""""
 
 """ Lightline
 """""""""""""""""""""""""""""
