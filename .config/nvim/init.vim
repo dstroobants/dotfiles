@@ -127,7 +127,9 @@ Plug 'junegunn/fzf.vim'
 " Retro groove color scheme for Vim
 Plug 'gruvbox-community/gruvbox'
 " Nord color scheme for Vim
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
+" https://github.com/folke/tokyonight.nvim
+Plug 'folke/tokyonight.nvim'
 " The fancy start screen for Vim
 "Plug 'mhinz/vim-startify'
 " Fuzzy file, buffer, mru, tag, etc finder.
@@ -183,5 +185,6 @@ set noshowmode
 " Retro groove color scheme for Vim
 " colorscheme gruvbox
 " Nord color scheme
-colorscheme nord
-
+" colorscheme nord
+" TokyoNight Color Scheme
+colorscheme tokyonight

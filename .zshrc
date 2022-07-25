@@ -41,6 +41,7 @@ alias alacrittyconf='vim ~/.alacritty.yml'
 alias alacrittyupdate='cd ~/Apps/alacritty/ && git pull'
 alias kube='kubectl'
 alias drun='docker run -it --rm'
+alias tf='terraform'
 
 # dotfiles repo configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -123,3 +124,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ### Kubectl auto completion
 ##################################################################################################
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+### Terraform auto completion
+##################################################################################################
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
