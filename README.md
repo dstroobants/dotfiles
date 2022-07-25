@@ -2,4 +2,4 @@
 
 Install on new system:
 
-`curl -Lks https://github.com/dstroobants/dotfiles/blob/main/dotfilesInstall.sh | /bin/bash`
+`curl -Lks https://raw.githubusercontent.com/dstroobants/dotfiles/main/dotfilesInstall.sh | /bin/bash`
