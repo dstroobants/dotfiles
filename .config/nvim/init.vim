@@ -127,7 +127,7 @@ Plug 'junegunn/fzf.vim'
 " Retro groove color scheme for Vim
 Plug 'gruvbox-community/gruvbox'
 " Nord color scheme for Vim
-" Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 " https://github.com/folke/tokyonight.nvim
 Plug 'folke/tokyonight.nvim'
 " The fancy start screen for Vim
