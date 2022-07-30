@@ -25,7 +25,7 @@ set shiftwidth=4
 " Insert “tabstop” number of spaces when the “tab” key is pressed.
 set smarttab
 " Indent using four spaces.
-set tabstop=4
+set tabstop=2
 
 """ Search Options
 """""""""""""""""""""""""""""
@@ -80,6 +80,8 @@ set visualbell
 set mouse=a
 " Set the window’s title, reflecting the file currently being edited.
 set title
+" Shows the line numbers on the left
+set number
 
 """ Miscellaneous Options
 """""""""""""""""""""""""""""
@@ -118,6 +120,8 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+" Toggle Blame
+nnoremap <leader>b :GitBlameToggle<CR>
 
 """ Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -170,22 +174,26 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 " Comments
 Plug 'numToStr/Comment.nvim'
-
+" Git blame
+Plug 'f-person/git-blame.nvim'
+" Syntax Highlights
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'm-demare/hlargs.nvim'
 " ************** Completion
 " ************** https://github.com/ms-jpq/coq_nvim
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 " 9000+ Snippets
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-
 " lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
 " Need to **configure separately**
-
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 " - shell repl
 " - nvim lua api
 " - scientific calculator
 " - comment banner
 " *************** Completion End
+" Super fast git decorations implemented purely in lua/teal.
+Plug 'lewis6991/gitsigns.nvim'
 " Initialize plugin system
 call plug#end()
 
@@ -229,6 +237,10 @@ colorscheme tokyonight
 """ Comment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua require('Comment').setup()
+
+""" Comment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" require('hlargs').setup()
 
 """ Commands to run on startup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
