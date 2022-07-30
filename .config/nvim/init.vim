@@ -93,6 +93,8 @@ set confirm
 set hidden
 "Ignore file’s mode lines; use vimrc configurations instead.
 set nomodeline
+"Enter visual mode by pressing shift + arrows
+set keymodel=startsel,stopsel
 
 """ Remaps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,6 +111,13 @@ nnoremap <Leader>t :FloatermNew --height=0.9 --width=0.9 --wintype=float<CR>
 nnoremap <Leader>u :UndotreeToggle<CR>
 " Substitute
 nnoremap <Leader>s :%s///g<left><left><left>
+" NerdTree
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+" Find files with Telescope using lua
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 """ Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -156,6 +165,11 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'elzr/vim-json'
 " A Vim plugin for visually displaying indent levels in code
 Plug 'nathanaelkane/vim-indent-guides'
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+" Comments
+Plug 'numToStr/Comment.nvim'
 
 " ************** Completion
 " ************** https://github.com/ms-jpq/coq_nvim
@@ -172,7 +186,6 @@ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 " - scientific calculator
 " - comment banner
 " *************** Completion End
-
 " Initialize plugin system
 call plug#end()
 
@@ -181,8 +194,6 @@ call plug#end()
 
 """ Nerdtree
 """""""""""""""""""""""""""""
-nnoremap <Leader>f :NERDTreeToggle<CR>
-
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
@@ -214,6 +225,10 @@ set noshowmode
 " colorscheme nord
 " TokyoNight Color Scheme
 colorscheme tokyonight
+
+""" Comment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua require('Comment').setup()
 
 """ Commands to run on startup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
