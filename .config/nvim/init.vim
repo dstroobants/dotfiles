@@ -156,6 +156,23 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'elzr/vim-json'
 " A Vim plugin for visually displaying indent levels in code
 Plug 'nathanaelkane/vim-indent-guides'
+
+" ************** Completion
+" ************** https://github.com/ms-jpq/coq_nvim
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+" 9000+ Snippets
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
+" lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
+" Need to **configure separately**
+
+Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+" - shell repl
+" - nvim lua api
+" - scientific calculator
+" - comment banner
+" *************** Completion End
+
 " Initialize plugin system
 call plug#end()
 
@@ -197,4 +214,8 @@ set noshowmode
 " colorscheme nord
 " TokyoNight Color Scheme
 colorscheme tokyonight
+
+""" Commands to run on startup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd VimEnter * COQnow
 
