@@ -133,14 +133,14 @@ Plug 'tpope/vim-sensible'
 " A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 " Shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks.
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 " A command-line fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Retro groove color scheme for Vim
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
 " Nord color scheme for Vim
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 " https://github.com/folke/tokyonight.nvim
 Plug 'folke/tokyonight.nvim'
 " The fancy start screen for Vim
@@ -237,10 +237,6 @@ colorscheme tokyonight
 """ Comment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua require('Comment').setup()
-
-""" Comment
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" require('hlargs').setup()
 
 """ Commands to run on startup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
