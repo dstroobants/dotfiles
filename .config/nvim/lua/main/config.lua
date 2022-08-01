@@ -9,7 +9,7 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 ----- Clipboard
 --------------------------------------------------------------------------------------------------
 -- Uses the system clipboard as default
-opt.clipboard = unnamedplus
+opt.clipboard = 'unnamedplus'
 
 ----- Indention Options
 -----------------------------
@@ -22,7 +22,7 @@ opt.expandtab = true
 --When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
 opt.shiftround = true
 --When shifting, indent using four spaces.
-opt.shiftwidth = 4
+opt.shiftwidth = 2
 --Insert “tabstop” number of spaces when the “tab” key is pressed.
 opt.smarttab = true
 --Indent using four spaces.
@@ -57,7 +57,7 @@ opt.scrolloff = 1
 --The number of screen columns to keep to the left and right of the cursor.
 opt.sidescrolloff = 5
 --Enable syntax highlighting.
---syntax enable
+opt.syntax = 'enable'
 --Enable line wrapping.
 opt.wrap = true
 

@@ -28,7 +28,7 @@ map('n', '<leader>u', ':UndotreeToggle<CR>')
 --Substitute
 map('n', '<leader>s', ':%s///g<left><left><left>')
 --NerdTree
-map('n', '<leader>nt', ':NERDTreeToggle<CR>')
+map('n', '<leader>d', ':NERDTreeToggle<CR>')
 --Find files with Telescope using lua
 map('n', '<leader>ff', 'require("telescope.builtin").find_files()<CR>')
 map('n', '<leader>fg', 'require("telescope.builtin").live_grep()<CR>')
