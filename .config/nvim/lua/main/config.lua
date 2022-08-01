@@ -9,7 +9,7 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 ----- Clipboard
 --------------------------------------------------------------------------------------------------
 -- Uses the system clipboard as default
-opt.clipboard = unnamedplus
+opt.clipboard = 'unnamedplus'
 
 ----- Indention Options
 -----------------------------
@@ -74,7 +74,7 @@ opt.tabpagemax = 50
 --Flash the screen instead of beeping on errors.
 opt.visualbell = true
 --Enable mouse for scrolling and resizing.
-opt.mouse = a
+opt.mouse = 'a'
 --Set the window’s title, reflecting the file currently being edited.
 opt.title = true
 --Shows the line numbers on the left
