@@ -74,7 +74,7 @@ opt.tabpagemax = 50
 --Flash the screen instead of beeping on errors.
 opt.visualbell = true
 --Enable mouse for scrolling and resizing.
-opt.mouse = a
+opt.mouse = 'a'
 --Set the window’s title, reflecting the file currently being edited.
 opt.title = true
 --Shows the line numbers on the left
@@ -89,5 +89,5 @@ opt.backspace = 'indent,eol,start'
 --Display a confirmation dialog when closing an unsaved file.
 opt.confirm = true
 --Enter visual mode by pressing shift + arrows
-opt.keymodel = 'startsel,stopsel'
+opt.keymodel = 'startsel'
 

@@ -48,9 +48,6 @@ Plug('nvim-telescope/telescope.nvim', {tag = '0.1.0'})
 Plug('numToStr/Comment.nvim')
 -- Git blame
 Plug('f-person/git-blame.nvim')
--- Syntax Highlights
-Plug('nvim-treesitter/nvim-treesitter')
-Plug('m-demare/hlargs.nvim')
 -- ************** Completion
 -- ************** https://github.com/ms-jpq/coq_nvim
 Plug('ms-jpq/coq_nvim', {branch = 'coq'})
@@ -66,8 +63,8 @@ Plug('ms-jpq/coq.thirdparty', {branch = '3p'})
 -- *************** Completion End
 -- Super fast git decorations implemented purely in lua/teal.
 Plug('lewis6991/gitsigns.nvim')
--- Initialize plugin system
 
+-- Initialize plugin system
 vim.call('plug#end')
 
 --------------------------------------------------------------------------------------------------
