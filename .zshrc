@@ -25,17 +25,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ### Aliases
 ##################################################################################################
-if [ ${USER} = 'denis' ]; then
-    alias vim='/home/denis/nvim0.7.2/nvim-linux64/bin/nvim'
-else
-    alias vim='nvim'
-fi
-alias f='vim $(fzf)'
+alias vim='nvim'
+alias f='nvim $(fzf)'
 alias bashconf='vim ~/.bash_profile'
 alias bashreload='source ~/.bash_profile'
 alias zshconf='vim ~/.zshrc'
 alias zshreload='source ~/.zshrc'
-alias vimconf='vim ~/.config/nvim/.'
+alias vimconf='vim ~/.config/nvim/init.vim'
 alias tmuxconf='vim ~/.tmux.conf'
 alias tmuxreload='tmux source ~/.tmux.conf'
 alias tmuxnew='tmux new -s'
