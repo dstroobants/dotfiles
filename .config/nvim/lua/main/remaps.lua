@@ -28,12 +28,12 @@ map('n', '<leader>u', ':UndotreeToggle<CR>')
 --Substitute
 map('n', '<leader>s', ':%s///g<left><left><left>')
 --NerdTree
-map('n', '<leader>nt', ':NERDTreeToggle<CR>')
+map('n', '<leader>d', ':NERDTreeToggle<CR>')
 --Find files with Telescope using lua
-map('n', '<leader>ff', 'require("telescope.builtin").find_files()<CR>')
-map('n', '<leader>fg', 'require("telescope.builtin").live_grep()<CR>')
-map('n', '<leader>fb', 'require("telescope.builtin").buffers()<CR>')
-map('n', '<leader>fh', 'require("telescope.builtin").help_tags()<CR>')
+map('n', '<leader>ff', ":lua require'telescope.builtin'.find_files()<CR>")
+map('n', '<leader>fg', ":lua require'telescope.builtin'.live_grep()<CR>")
+map('n', '<leader>fb', ":lua require'telescope.builtin'.buffers()<CR>")
+map('n', '<leader>fh', ":lua require'telescope.builtin'.help_tags()<CR>")
 --Toggle Blame
 map('n', '<leader>b', ':GitBlameToggle<CR>')
 
