@@ -25,7 +25,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ### Aliases
 ##################################################################################################
-alias vim='nvim'
+if [ ${USER} = 'denis' ]; then
+    alias vim='~/nvim0.7.2/nvim-linux64/bin/nvim'
+else
+    alias vim='nvim'
+fi
 alias f='vim $(fzf)'
 alias bashconf='vim ~/.bash_profile'
 alias bashreload='source ~/.bash_profile'
@@ -119,7 +123,7 @@ fi
 ### Oh My Zsh
 ##################################################################################################
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ### Kubectl auto completion
 ##################################################################################################
