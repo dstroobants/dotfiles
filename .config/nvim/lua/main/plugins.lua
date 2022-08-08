@@ -63,6 +63,10 @@ Plug('ms-jpq/coq.thirdparty', {branch = '3p'})
 -- *************** Completion End
 -- Super fast git decorations implemented purely in lua/teal.
 Plug('lewis6991/gitsigns.nvim')
+-- A snazzy 💅 buffer line (with tabpage integration) for Neovim built using lua.
+Plug('kyazdani42/nvim-web-devicons') -- Recommended (for coloured icons)
+-- Plug 'ryanoasis/vim-devicons' Icons without colours
+Plug('akinsho/bufferline.nvim', {tag = 'v2.*' })
 
 -- Initialize plugin system
 vim.call('plug#end')
@@ -122,4 +126,8 @@ vim.g['lightline'] = {colorscheme = 'tokyonight'}
 ----- Comment
 --------------------------------------------------------------------------------------------------
 require('Comment').setup()
+
+----- Bufferline
+--------------------------------------------------------------------------------------------------
+require('bufferline').setup()
 

@@ -4,7 +4,6 @@
 
 ----- Settings
 --------------------------------------------------------------------------------------------------
-local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
 ----- Clipboard
 --------------------------------------------------------------------------------------------------
@@ -60,6 +59,8 @@ opt.sidescrolloff = 5
 opt.syntax = 'enable'
 --Enable line wrapping.
 opt.wrap = true
+--Render Colors
+opt.termguicolors=true
 
 ----- User Interface Options
 -----------------------------

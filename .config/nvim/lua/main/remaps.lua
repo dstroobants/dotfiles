@@ -17,6 +17,28 @@ vim.g.mapleader = " "
 -- Neovim shortcuts
 -----------------------------------------------------------
 
+----- Native
+-----------------------------------------------------------
+
+----- Tabs
+-----------------------------------------------------------
+-- Access tabs with leader + number row
+map('n', '<leader>1', '1gt')
+map('n', '<leader>2', '2gt')
+map('n', '<leader>3', '3gt')
+map('n', '<leader>4', '4gt')
+map('n', '<leader>5', '5gt')
+map('n', '<leader>6', '6gt')
+map('n', '<leader>7', '7gt')
+map('n', '<leader>8', '8gt')
+map('n', '<leader>9', '9gt')
+
+-- Use CTRL and left/right to change tab
+map('n', '<C-Left>', ':tabprevious<CR>')
+map('n', '<C-Right>', ':tabnext<CR>')
+
+----- Plugins
+-----------------------------------------------------------
 --FzF
 map('n', '<leader>p', ':FZF<CR>')
 --RipGrep
