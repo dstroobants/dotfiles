@@ -9,7 +9,7 @@ Plug('tpope/vim-sensible')
 -- A Git wrapper so awesome, it should be illegal
 Plug('tpope/vim-fugitive')
 -- Shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks.
--- Plug('airblade/vim-gitgutter'
+Plug('airblade/vim-gitgutter')
 -- A command-line fuzzy finder
 Plug('junegunn/fzf', {['do'] = vim.fn['fzf#install']})
 Plug('junegunn/fzf.vim')
@@ -84,6 +84,8 @@ vim.g['NERDTreeDisablePatternMatchHighlight'] = 1
 
 -- Open files in new tabs
 vim.g['NERDTreeMapOpenInTab'] = '<ENTER>'
+-- CLose nerdtree on file open
+vim.g['NERDTreeQuitOnOpen'] = 1
 
 ----- Lightline
 -----------------------------
