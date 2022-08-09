@@ -82,6 +82,9 @@ vim.g['NERDTreeDisableFileExtensionHighlight'] = 1
 vim.g['NERDTreeDisableExactMatchHighlight'] = 1
 vim.g['NERDTreeDisablePatternMatchHighlight'] = 1
 
+-- Open files in new tabs
+vim.g['NERDTreeMapOpenInTab'] = '<ENTER>'
+
 ----- Lightline
 -----------------------------
 vim.g['lightline'] = {

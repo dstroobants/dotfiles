@@ -9,9 +9,13 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
---Remap leader to space
+-- Remap leader to space
 map('', ' ', '<nop>')
 vim.g.mapleader = " "
+
+-- Set Terminal
+
+
 
 -----------------------------------------------------------
 -- Neovim shortcuts
@@ -34,8 +38,8 @@ map('n', '<leader>8', '8gt')
 map('n', '<leader>9', '9gt')
 
 -- Use CTRL and left/right to change tab
-map('n', '<C-Left>', ':tabprevious<CR>')
-map('n', '<C-Right>', ':tabnext<CR>')
+map('n', '<C-j>', ':tabprevious<CR>')
+map('n', '<C-k>', ':tabnext<CR>')
 
 ----- Plugins
 -----------------------------------------------------------
