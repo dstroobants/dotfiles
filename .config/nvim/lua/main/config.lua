@@ -61,7 +61,7 @@ opt.syntax = 'enable'
 --Enable line wrapping.
 opt.wrap = true
 --Render Colors
-opt.termguicolors=true
+opt.termguicolors = true
 
 ----- User Interface Options
 -----------------------------
@@ -79,8 +79,10 @@ opt.visualbell = true
 opt.mouse = 'a'
 --Set the window’s title, reflecting the file currently being edited.
 opt.title = true
---Shows the line numbers on the left
+--Show line Numbers
 opt.number = true
+--Show relative numbers
+opt.relativenumber = true
 
 ----- Miscellaneous Options
 -----------------------------

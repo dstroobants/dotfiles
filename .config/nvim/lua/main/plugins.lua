@@ -123,6 +123,8 @@ vim.g.coq_settings = {
 -- colorscheme nord
 -- TokyoNight Color Scheme
 vim.cmd[[colorscheme tokyonight]]
+-- Change line number color
+vim.cmd[[hi LineNr guifg=#7aa2f7]]
 -- Enable the tokyonight colorscheme for Lightline
 vim.g['lightline'] = {colorscheme = 'tokyonight'}
 
