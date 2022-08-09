@@ -21,7 +21,7 @@ opt.expandtab = true
 --filetype indent on
 --When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
 opt.shiftround = true
---When shifting, indent using four spaces.
+--When shifting, indent using two spaces.
 opt.shiftwidth = 2
 --Insert “tabstop” number of spaces when the “tab” key is pressed.
 opt.smarttab = true
