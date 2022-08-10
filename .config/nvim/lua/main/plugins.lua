@@ -63,7 +63,7 @@ Plug('ms-jpq/coq.thirdparty', {branch = '3p'})
 -- *************** Completion End
 -- Super fast git decorations implemented purely in lua/teal.
 Plug('lewis6991/gitsigns.nvim')
--- A snazzy 💅 buffer line (with tabpage integration) for Neovim built using lua.
+-- Icons
 Plug('kyazdani42/nvim-web-devicons') -- Recommended (for coloured icons)
 
 -- Initialize plugin system

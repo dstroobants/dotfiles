@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path to your oh-my-zsh installation.
 if [ ${USER} = 'denis' ]; then
     export ZSH="/home/denis/.oh-my-zsh"
@@ -109,10 +102,7 @@ alias sublime='~/./Apps/sublime_text/sublime_text'
 
 ### Plugins
 ##################################################################################################
-plugins=(
-  git
-  #zsh-autosuggestions
-)
+plugins=(git zsh-autosuggestions)
 
 ### Local Configuration
 ##################################################################################################
@@ -139,4 +129,9 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 if [ ${USER} = 'denis.stroobants' ]; then
     [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 fi
+
+
+### Init Cargo - Rust Package Manager
+##################################################################################################
+. "$HOME/.cargo/env"
 
