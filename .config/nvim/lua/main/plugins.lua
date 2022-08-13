@@ -65,6 +65,8 @@ Plug('ms-jpq/coq.thirdparty', {branch = '3p'})
 Plug('lewis6991/gitsigns.nvim')
 -- Icons
 Plug('kyazdani42/nvim-web-devicons') -- Recommended (for coloured icons)
+-- https://github.com/rust-lang/rust.vim
+Plug 'rust-lang/rust.vim'
 
 -- Initialize plugin system
 vim.call('plug#end')

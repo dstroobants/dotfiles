@@ -17,8 +17,6 @@ opt.clipboard = 'unnamedplus'
 opt.autoindent = true
 --Convert tabs to spaces.
 opt.expandtab = true
---Enable indentation rules that are file-type specific.
---filetype indent on
 --When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
 opt.shiftround = true
 --When shifting, indent using two spaces.
