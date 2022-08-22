@@ -1,10 +1,17 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 if [ ${USER} = 'denis' ]; then
-    # export ZSH="/home/denis/.oh-my-zsh"
+    export ZSH="/home/denis/.oh-my-zsh"
     export PATH="$PATH:/home/denis/.cargo/bin"
 
 else
-    # export ZSH="/Users/denis.stroobants/.oh-my-zsh"
+    export ZSH="/Users/denis.stroobants/.oh-my-zsh"
     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
 
@@ -105,7 +112,7 @@ alias sublime='~/./Apps/sublime_text/sublime_text'
 
 ### Plugins
 ##################################################################################################
-plugins=(git zsh-autosuggestions)
+plugins=(git compleat)
 
 ### Local Configuration
 ##################################################################################################
@@ -113,26 +120,32 @@ if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
 
-# ### Kubectl auto completion
-# ##################################################################################################
-# [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+### Kubectl auto completion
+##################################################################################################
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-# ### Terraform auto completion
-# ##################################################################################################
-# autoload -U +X bashcompinit && bashcompinit
-# complete -o nospace -C /opt/homebrew/bin/terraform terraform
+### Terraform auto completion
+##################################################################################################
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 ### Bash autocompletion
 ##################################################################################################
-# if [ ${USER} = 'denis.stroobants' ]; then
-#     [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-# fi
+if [ ${USER} = 'denis.stroobants' ]; then
+    [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+fi
 
 ### Init Cargo - Rust Package Manager
 ##################################################################################################
 . "$HOME/.cargo/env"
 
-### Starship - Keep at the end
+### Set Theme to P10K
 ##################################################################################################
-eval "$(starship init zsh)"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+### Init Oh my ZSH
+###################################################################################################
+source $ZSH/oh-my-zsh.sh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
