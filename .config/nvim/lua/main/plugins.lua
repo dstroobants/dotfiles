@@ -50,12 +50,12 @@ Plug('numToStr/Comment.nvim')
 Plug('f-person/git-blame.nvim')
 -- ************** Completion
 -- ************** https://github.com/ms-jpq/coq_nvim
-Plug('ms-jpq/coq_nvim', {branch = 'coq'})
+-- Plug('ms-jpq/coq_nvim', {branch = 'coq'})
 -- 9000+ Snippets
-Plug('ms-jpq/coq.artifacts', {branch = 'artifacts'})
+-- Plug('ms-jpq/coq.artifacts', {branch = 'artifacts'})
 -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
 -- Need to **configure separately**
-Plug('ms-jpq/coq.thirdparty', {branch = '3p'})
+-- Plug('ms-jpq/coq.thirdparty', {branch = '3p'})
 -- - shell repl
 -- - nvim lua api
 -- - scientific calculator

@@ -1,16 +1,12 @@
 # Path to your oh-my-zsh installation.
 if [ ${USER} = 'denis' ]; then
     export ZSH="/home/denis/.oh-my-zsh"
+    export PATH="$PATH:/home/denis/.cargo/bin"
+
 else
     export ZSH="/Users/denis.stroobants/.oh-my-zsh"
     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ##################################################################################################
 ### zsh configuration
@@ -28,6 +24,7 @@ alias bashconf='vim ~/.bash_profile'
 alias bashreload='source ~/.bash_profile'
 alias zshconf='vim ~/.zshrc'
 alias zshreload='source ~/.zshrc'
+alias starshipconf='vim ~/.config/starship.toml'
 alias vimconf='vim ~/.config/nvim/'
 alias tmuxconf='vim ~/.tmux.conf'
 alias tmuxreload='tmux source ~/.tmux.conf'
@@ -96,6 +93,12 @@ function ec2IP(){
     echo $ec2_ip | jq '.[][0]["Instances"][0]["PrivateIpAddress"]' | tr -d '"'
 }
 
+# SSH to the raspberry pi
+raspberry-ssh () {
+    ping raspberrypi.local
+    echo "ssh denis@ipv6address"
+}
+
 ### Apps
 ##################################################################################################
 alias sublime='~/./Apps/sublime_text/sublime_text'
@@ -109,11 +112,6 @@ plugins=(git zsh-autosuggestions)
 if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
-
-### Oh My Zsh
-##################################################################################################
-source $ZSH/oh-my-zsh.sh
-# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ### Kubectl auto completion
 ##################################################################################################
@@ -130,8 +128,10 @@ if [ ${USER} = 'denis.stroobants' ]; then
     [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 fi
 
-
 ### Init Cargo - Rust Package Manager
 ##################################################################################################
 . "$HOME/.cargo/env"
 
+### Starship - Keep at the end
+##################################################################################################
+eval "$(starship init zsh)"
