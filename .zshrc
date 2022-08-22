@@ -1,10 +1,10 @@
 # Path to your oh-my-zsh installation.
 if [ ${USER} = 'denis' ]; then
-    export ZSH="/home/denis/.oh-my-zsh"
+    # export ZSH="/home/denis/.oh-my-zsh"
     export PATH="$PATH:/home/denis/.cargo/bin"
 
 else
-    export ZSH="/Users/denis.stroobants/.oh-my-zsh"
+    # export ZSH="/Users/denis.stroobants/.oh-my-zsh"
     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
 
@@ -113,20 +113,20 @@ if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
 
-### Kubectl auto completion
-##################################################################################################
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+# ### Kubectl auto completion
+# ##################################################################################################
+# [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-### Terraform auto completion
-##################################################################################################
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+# ### Terraform auto completion
+# ##################################################################################################
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 ### Bash autocompletion
 ##################################################################################################
-if [ ${USER} = 'denis.stroobants' ]; then
-    [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-fi
+# if [ ${USER} = 'denis.stroobants' ]; then
+#     [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+# fi
 
 ### Init Cargo - Rust Package Manager
 ##################################################################################################
@@ -135,3 +135,4 @@ fi
 ### Starship - Keep at the end
 ##################################################################################################
 eval "$(starship init zsh)"
+

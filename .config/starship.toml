@@ -13,8 +13,8 @@ disabled = true
 # disabled = false
 # detect_files = ['k8s']
 
-[bun]
-format = "via [$symbol]($style)"
+# [bun]
+# format = "via [$symbol]($style)"
 
 [buf]
 format = "via [$symbol]($style)"
