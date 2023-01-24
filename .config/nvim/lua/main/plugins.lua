@@ -33,10 +33,6 @@ Plug('sheerun/vim-polyglot')
 Plug('ntpeters/vim-better-whitespace')
 -- The NERDTree is a file system explorer for the Vim editor
 Plug('preservim/nerdtree')
--- Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
-Plug('ryanoasis/vim-devicons')
--- Needed for devicons color
-Plug('tiagofumo/vim-nerdtree-syntax-highlight')
 -- A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
 Plug('elzr/vim-json')
 -- A Vim plugin for visually displaying indent levels in code
@@ -48,23 +44,8 @@ Plug('nvim-telescope/telescope.nvim', {tag = '0.1.0'})
 Plug('numToStr/Comment.nvim')
 -- Git blame
 Plug('f-person/git-blame.nvim')
--- ************** Completion
--- ************** https://github.com/ms-jpq/coq_nvim
--- Plug('ms-jpq/coq_nvim', {branch = 'coq'})
--- 9000+ Snippets
--- Plug('ms-jpq/coq.artifacts', {branch = 'artifacts'})
--- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
--- Need to **configure separately**
--- Plug('ms-jpq/coq.thirdparty', {branch = '3p'})
--- - shell repl
--- - nvim lua api
--- - scientific calculator
--- - comment banner
--- *************** Completion End
 -- Super fast git decorations implemented purely in lua/teal.
 Plug('lewis6991/gitsigns.nvim')
--- Icons
-Plug('kyazdani42/nvim-web-devicons') -- Recommended (for coloured icons)
 -- https://github.com/rust-lang/rust.vim
 Plug 'rust-lang/rust.vim'
 
@@ -111,12 +92,6 @@ vim.g['lightline'] = {
 -- Removes the vim mode information as lightline already shows it
 -- set noshowmode
 
------ COQ
------------------------------
-vim.g.coq_settings = {
-  auto_start = true,
-}
-
 ----- Theme
 --------------------------------------------------------------------------------------------------
 -- Retro groove color scheme for Vim
@@ -133,4 +108,3 @@ vim.g['lightline'] = {colorscheme = 'tokyonight'}
 ----- Comment
 --------------------------------------------------------------------------------------------------
 require('Comment').setup()
-
