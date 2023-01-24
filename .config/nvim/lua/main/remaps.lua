@@ -58,4 +58,3 @@ map('n', '<leader>fb', ":lua require'telescope.builtin'.buffers()<CR>")
 map('n', '<leader>fh', ":lua require'telescope.builtin'.help_tags()<CR>")
 --Toggle Blame
 map('n', '<leader>b', ':GitBlameToggle<CR>')
-
