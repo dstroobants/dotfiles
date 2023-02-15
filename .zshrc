@@ -12,6 +12,7 @@ else
     export ZSH="/Users/denis.stroobants/.oh-my-zsh"
     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     export PATH="$PATH:/Users/denis.stroobants/Library/Python/3.10/bin"
+    export PATH="$PATH:/Users/denis.stroobants/bin"
 fi
 
 ##################################################################################################
